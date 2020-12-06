@@ -1,0 +1,12 @@
+<div class="shopper">
+    <h1><%= @product.name %></h1>
+
+        <div class="entry">
+            <%= image_tag(@product.image, class: "viewimg") %>
+            <p><%= sanitize(@product.description) %></p>
+            <div class="price_line">
+                <span class="price">$<%= @product.price %></span>
+            </div>
+            <%= button_to 'Add to Cart', lineitems_path(product_id: @product), class: 'button', remote: true %>
+        </div>
+</div>
